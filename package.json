@@ -1,0 +1,16 @@
+{
+  "name": "academic-burnout-ews",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": ["backend", "frontend"],
+  "scripts": {
+    "install:all": "npm install --workspaces",
+    "dev": "concurrently \"npm run dev --workspace backend\" \"npm run dev --workspace frontend\"",
+    "db:init": "npm run db:init --workspace backend",
+    "db:seed": "npm run db:seed --workspace backend",
+    "build": "npm run build --workspace frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
